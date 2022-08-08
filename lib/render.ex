@@ -1,16 +1,16 @@
 defimpl Kino.Render, for: Benchee.Suite do
   def to_livebook(suite_results) do
-    # ---- Run time stats ----
+    # Run time visuals
     run_time_table = run_time_table(suite_results)
     run_time_chart = run_time_chart(suite_results)
     run_time_stats = Kino.Layout.grid([run_time_table, run_time_chart])
 
-    # ---- Memory stats ----
+    # Memory visuals
     memory_table = memory_table(suite_results)
     memory_chart = memory_chart(suite_results)
     memory_stats = Kino.Layout.grid([memory_table, memory_chart])
 
-    # ---- Reduction stats ----
+    # Reduction visuals
     reductions_table = reductions_table(suite_results)
     reductions_chart = reductions_chart(suite_results)
     reductions_stats = Kino.Layout.grid([reductions_table, reductions_chart])
