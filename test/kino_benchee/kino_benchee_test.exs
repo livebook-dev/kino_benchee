@@ -1,7 +1,7 @@
 defmodule KinoBencheeTest do
   use ExUnit.Case, async: true
 
-  test "KinoBenchee should render benchee suite statistics" do
+  test "implements Kino.Render for Benchee.Suite" do
     render_result = Kino.Render.to_livebook(sample_benchee_suite())
 
     # Ensure that we got the run time, memory and reduction tabs
