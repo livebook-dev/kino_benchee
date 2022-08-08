@@ -1,0 +1,50 @@
+# Components
+
+```elixir
+Mix.install([
+  {:kino_benchee, "~> 0.1.0"}
+])
+```
+
+## Kinos
+
+### Benchee
+
+This integration automatically renders the results of a [Benchee](https://github.com/bencheeorg/benchee)
+test suite.
+
+For example, if you wanted to compare the various implementations of descending sort you could do the following:
+
+```elixir
+defmodule BenchmarkTests do
+  @list 1..10_000 |> Enum.to_list() |> Enum.shuffle()
+
+  def sort_reverse do
+    @list |> Enum.sort() |> Enum.reverse()
+  end
+
+  def sort_desc do
+    @list |> Enum.sort(:desc)
+  end
+
+  def sort_function do
+    Enum.sort(@list, &(&1 > &2))
+  end
+
+  def sort_by do
+    Enum.sort_by(@list, fn val -> -val end)
+  end
+end
+
+Benchee.run(
+  %{
+    "sort |> reverse" => &BenchmarkTests.sort_reverse/0,
+    "sort :desc" => &BenchmarkTests.sort_desc/0,
+    "sort(fun)" => &BenchmarkTests.sort_function/0,
+    "sort_by(-value)" => &BenchmarkTests.sort_by/0
+  },
+  time: 1,
+  memory_time: 1,
+  reduction_time: 1
+)
+```

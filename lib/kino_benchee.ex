@@ -1,2 +1,0 @@
-defmodule KinoBenchee do
-end
