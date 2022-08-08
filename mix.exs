@@ -13,6 +13,7 @@ defmodule KinoBenchee.MixProject do
       elixir: "~> 1.13",
       start_permanent: Mix.env() == :prod,
       deps: deps(),
+      docs: docs(),
       package: package()
     ]
   end
@@ -29,7 +30,20 @@ defmodule KinoBenchee.MixProject do
       {:kino_vega_lite, "~> 0.1.3"},
       # TODO: Uncomment once release is cut
       # {:benchee, "~> 1.1.0"}
-      {:benchee, github: "akoutmos/benchee", branch: :adding_table_support}
+      {:benchee, github: "akoutmos/benchee", branch: :adding_table_support},
+      {:ex_doc, "~> 0.28", only: :dev, runtime: false}
+    ]
+  end
+
+  defp docs do
+    [
+      main: "components",
+      source_url: "https://github.com/livebook-dev/kino_benchee",
+      source_ref: "v#{@version}",
+      extras: ["guides/components.livemd"],
+      groups_for_extras: [
+        Kinos: ["guides/components.livemd"]
+      ]
     ]
   end
 
