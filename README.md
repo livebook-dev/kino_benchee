@@ -4,8 +4,9 @@
 [![Actions
 Status](https://github.com/livebook-dev/kino_benchee/workflows/Test/badge.svg)](https://github.com/livebook-dev/kino_benchee/actions)
 
-[Benchee](https://github.com/bencheeorg/benchee) integration with
-[Kino](https://github.com/livebook-dev/kino) for [Livebook](https://github.com/livebook-dev/livebook).
+[Benchee](https://github.com/bencheeorg/benchee) integration with [Livebook](https://github.com/livebook-dev/livebook).
+
+Currently WIP.
 
 ## Installation
 
