@@ -8,16 +8,6 @@ Status](https://github.com/livebook-dev/kino_benchee/workflows/Test/badge.svg)](
 
 Currently WIP.
 
-## Installation
-
-To bring KinoBenchee to Livebook all you need to do is `Mix.install/2`:
-
-```elixir
-Mix.install([
-  {:kino_benchee, "~> 0.1.0"}
-])
-```
-
 ## License
 
 Copyright (C) 2022 Dashbit
