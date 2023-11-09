@@ -24,14 +24,10 @@ defmodule KinoBenchee.MixProject do
 
   defp deps do
     [
-      # TODO: Uncomment once release is cut
-      # {:kino, "~> 0.6.2"},
-      {:kino, github: "livebook-dev/kino", branch: :main, override: true},
-      {:kino_vega_lite, "~> 0.1.3"},
-      # TODO: Uncomment once release is cut
-      # {:benchee, "~> 1.1.0"}
-      {:benchee, github: "akoutmos/benchee", branch: :adding_table_support},
-      {:ex_doc, "~> 0.28", only: :dev, runtime: false}
+      {:kino, "~> 0.11"},
+      {:kino_vega_lite, "~> 0.1"},
+      {:benchee, "~> 1.2"},
+      {:ex_doc, "~> 0.30", only: :dev, runtime: false}
     ]
   end
 
