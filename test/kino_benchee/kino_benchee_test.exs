@@ -5,14 +5,9 @@ defmodule KinoBencheeTest do
     render_result = Kino.Render.to_livebook(sample_benchee_suite())
 
     # Ensure that we got the run time, memory and reduction tabs
-    assert {
-             :tabs,
-             [
-               {:grid, _, %{columns: 1}},
-               {:grid, _, %{columns: 1}},
-               {:grid, _, %{columns: 1}}
-             ],
-             %{labels: ["Run Time Statistics", "Memory Statistics", "Reduction Statistics"]}
+    assert %{
+             type: :tabs,
+             labels: ["Run Time Statistics", "Memory Statistics", "Reduction Statistics"]
            } = render_result
   end
 
@@ -30,7 +25,7 @@ defmodule KinoBencheeTest do
         measure_function_call_overhead: false,
         memory_time: 2.0e9,
         parallel: 1,
-        percentiles: '2c',
+        percentiles: ~c"2c",
         pre_check: false,
         print: %{benchmarking: true, configuration: true, fast_warning: true},
         profile_after: false,
