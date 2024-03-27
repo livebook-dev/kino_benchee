@@ -24,10 +24,10 @@ defmodule KinoBenchee.MixProject do
 
   defp deps do
     [
-      {:kino, "~> 0.11"},
+      {:kino, "~> 0.12"},
       {:kino_vega_lite, "~> 0.1"},
-      {:benchee, "~> 1.2"},
-      {:ex_doc, "~> 0.30", only: :dev, runtime: false}
+      {:benchee, "~> 1.3"},
+      {:ex_doc, "~> 0.31", only: :dev, runtime: false}
     ]
   end
 
