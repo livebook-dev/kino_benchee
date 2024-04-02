@@ -25,7 +25,7 @@ defmodule KinoBenchee.MixProject do
   defp deps do
     [
       {:kino, "~> 0.12"},
-      {:kino_vega_lite, "~> 0.1"},
+      {:kino_vega_lite, "~> 0.1.0"},
       {:benchee, "~> 1.3"},
       {:ex_doc, "~> 0.31", only: :dev, runtime: false}
     ]
