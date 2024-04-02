@@ -36,10 +36,7 @@ defmodule KinoBenchee.MixProject do
       main: "components",
       source_url: "https://github.com/livebook-dev/kino_benchee",
       source_ref: "v#{@version}",
-      extras: ["guides/components.livemd"],
-      groups_for_extras: [
-        Kinos: ["guides/components.livemd"]
-      ]
+      extras: ["guides/components.livemd"]
     ]
   end
 

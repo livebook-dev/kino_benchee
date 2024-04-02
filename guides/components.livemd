@@ -2,13 +2,13 @@
 
 ```elixir
 Mix.install([
-  {:kino_benchee,  github: "livebook-dev/kino_benchee"}
+  {:kino_benchee, "~> 0.1.0"}
 ])
 ```
 
 ## Kinos
 
-### Benchee
+### `%Benchee.Suite{}`
 
 This integration automatically renders the results of a [Benchee](https://github.com/bencheeorg/benchee)
 test suite.
