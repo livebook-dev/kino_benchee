@@ -11,8 +11,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Multi-facet charts for benchmarks with multiple inputs ([#7](https://github.com/livebook-dev/kino_benchee/pull/7))
 
-Initial release.
-
 ## [v0.1.0](https://github.com/livebook-dev/kino_benchee/tree/v0.1.0) (2024-04-02)
 
 Initial release.
